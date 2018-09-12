@@ -1,0 +1,11 @@
+*~
+*.swp
+*.swo
+*.pyc
+*.img
+*.qcow2
+*.sw*
+
+cache
+log
+.env

@@ -1,0 +1,18 @@
+---
+version: '2'
+services:
+  apt-cacher-ng:
+    build: .
+    image: apt-cacher-ng
+    container_name: apt-cacher-ng
+    restart: always
+    ports:
+      - "3142:3142/tcp"
+    volumes:
+      - cache:/var/cache/apt-cacher-ng
+      - log:/var/log/apt-cacher-ng
+
+# Auto-creates named volumes if they don't exist.
+volumes:
+  cache:
+  log:
