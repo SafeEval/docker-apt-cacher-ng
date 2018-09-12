@@ -11,10 +11,8 @@
 #            --name apt-cacher-ng apt-cacher-ng
 #
 # Compose: docker-compose up
-
-MAINTAINER Jack Sullivan
-
 FROM    ubuntu:latest
+MAINTAINER Jack Sullivan
 
 RUN     apt-get update
 RUN     apt-get install -y apt-cacher-ng ca-certificates
